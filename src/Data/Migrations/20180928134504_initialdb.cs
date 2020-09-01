@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace CoreCodeCamp.Migrations
 {
@@ -13,7 +14,7 @@ namespace CoreCodeCamp.Migrations
                 columns: table => new
                 {
                     LocationId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     VenueName = table.Column<string>(nullable: true),
                     Address1 = table.Column<string>(nullable: true),
                     Address2 = table.Column<string>(nullable: true),
@@ -33,7 +34,7 @@ namespace CoreCodeCamp.Migrations
                 columns: table => new
                 {
                     SpeakerId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     MiddleName = table.Column<string>(nullable: true),
@@ -53,7 +54,7 @@ namespace CoreCodeCamp.Migrations
                 columns: table => new
                 {
                     CampId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(nullable: true),
                     Moniker = table.Column<string>(nullable: true),
                     LocationId = table.Column<int>(nullable: true),
@@ -76,7 +77,7 @@ namespace CoreCodeCamp.Migrations
                 columns: table => new
                 {
                     TalkId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     CampId = table.Column<int>(nullable: true),
                     Title = table.Column<string>(nullable: true),
                     Abstract = table.Column<string>(nullable: true),

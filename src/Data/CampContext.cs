@@ -23,13 +23,13 @@ namespace CoreCodeCamp.Data
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      optionsBuilder.UseSqlServer(_config.GetConnectionString("CodeCamp"));
+      optionsBuilder.UseNpgsql(_config.GetConnectionString("CodeCamp"));
     }
 
     protected override void OnModelCreating(ModelBuilder bldr)
     {
       bldr.Entity<Camp>()
-        .HasData(new 
+        .HasData(new
         {
             CampId = 1,
             Moniker = "ATL2018",
@@ -40,7 +40,7 @@ namespace CoreCodeCamp.Data
         });
 
       bldr.Entity<Location>()
-        .HasData(new 
+        .HasData(new
         {
           LocationId = 1,
           VenueName = "Atlanta Convention Center",
@@ -52,7 +52,7 @@ namespace CoreCodeCamp.Data
         });
 
       bldr.Entity<Talk>()
-        .HasData(new 
+        .HasData(new
         {
           TalkId = 1,
           CampId = 1,

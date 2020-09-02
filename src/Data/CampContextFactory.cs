@@ -20,7 +20,7 @@ namespace CoreCodeCamp.Data
         .AddJsonFile("appsettings.json")
         .Build();
 
-      return new CampContext(new DbContextOptionsBuilder<CampContext>().Options, config);
+      return new CampContext(config);
     }
   }
 }

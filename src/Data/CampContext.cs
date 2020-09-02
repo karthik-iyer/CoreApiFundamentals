@@ -12,7 +12,7 @@ namespace CoreCodeCamp.Data
   {
     private readonly IConfiguration _config;
 
-    public CampContext(DbContextOptions options, IConfiguration config) : base(options)
+    public CampContext(IConfiguration config)
     {
       _config = config;
     }

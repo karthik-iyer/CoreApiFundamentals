@@ -18,13 +18,13 @@ namespace CoreCodeCamp.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
 
             modelBuilder.Entity("CoreCodeCamp.Data.Camp", b =>
                 {
                     b.Property<int>("CampId")
                         .ValueGeneratedOnAdd()
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
 
                     b.Property<DateTime>("EventDate");
 
@@ -58,7 +58,7 @@ namespace CoreCodeCamp.Migrations
                 {
                     b.Property<int>("LocationId")
                         .ValueGeneratedOnAdd()
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
 
                     b.Property<string>("Address1");
 
@@ -97,7 +97,7 @@ namespace CoreCodeCamp.Migrations
                 {
                     b.Property<int>("SpeakerId")
                         .ValueGeneratedOnAdd()
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
 
                     b.Property<string>("BlogUrl");
 
@@ -148,7 +148,7 @@ namespace CoreCodeCamp.Migrations
                 {
                     b.Property<int>("TalkId")
                         .ValueGeneratedOnAdd()
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
 
                     b.Property<string>("Abstract");
 
